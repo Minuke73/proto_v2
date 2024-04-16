@@ -94,6 +94,18 @@
 		<hotspot type="image" name="spot3" url="skin/hotspot2.png" style="skin_hotspotstyle" ath="-15.552" atv="19.172" width="282" height="166" linkmodal="modal2" onclick="custom_hotspotstyle_click();" />
 
 	</scene>
+	<scene name="scene_8-2" title="" onstart="" thumburl="panos/8-2.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
 
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/8-2.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/8-2.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+	</scene>
 
 </krpano>
