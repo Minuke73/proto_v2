@@ -90,8 +90,12 @@
 			<cube url="panos/8-1.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
 		</image>
 
-		<hotspot type="image" name="spot1" url="skin/hotspot1.png" style="skin_hotspotstyle" ath="-46.095" atv="35.228" width="282" height="166" linkmodal="modal1" onclick="custom_hotspotstyle_click();" />
-		<hotspot type="image" name="spot3" url="skin/hotspot2.png" style="skin_hotspotstyle" ath="-15.552" atv="19.172" width="282" height="166" linkmodal="modal2" onclick="custom_hotspotstyle_click();" />
+		<hotspot type="image" name="spot1" url="skin/vtourskin_hotspot.png" style="skin_hotspotstyle" ath="-46.095" atv="35.228" linkmodal="modal1" onclick="custom_hotspotstyle_click();" />
+		<hotspot name="popup1" style="custom_hotspotext"  html="한반도 지형 " ath="-45.095" atv="29.228"  linkmodal="modal1" onclick="custom_hotspotstyle_click();" />
+		
+		<hotspot type="image" name="spot3" url="skin/vtourskin_hotspot.png" style="skin_hotspotstyle" ath="-15.552" atv="19.172" linkmodal="modal2" onclick="custom_hotspotstyle_click();" />
+		<hotspot name="popup2" style="custom_hotspotext"  html="선암마을 " ath="-16.552" atv="14.172"  linkmodal="modal2" onclick="custom_hotspotstyle_click();" />
+
 
 	</scene>
 	<scene name="scene_8-2" title="" onstart="" thumburl="panos/8-2.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
