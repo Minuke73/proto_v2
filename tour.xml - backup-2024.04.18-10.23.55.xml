@@ -111,7 +111,7 @@
 			<cube url="panos/8-2.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
 		</image>
 
-		<hotspot name="spot4" style="skin_hotspotstyle" ath="12.477" atv="26.168" distorted="false" zoom="false" linkedscene="scene_8-1" linkedscene_hoffset="12.83" use3dtransition="true" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="278.534" atv="46.096" distorted="false" zoom="false" linkedscene="scene_8-1" linkedscene_hoffset="12.83" use3dtransition="true" />
 
 	</scene>
 
