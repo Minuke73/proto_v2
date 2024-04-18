@@ -28,9 +28,9 @@
 	               thumbs_scrollbuttons="false"
 	               thumbs_scrollindicator="false"
 	               thumbs_loop="false"
-	               tooltips_buttons="false"
+	               tooltips_buttons="true"
 	               tooltips_thumbs="false"
-	               tooltips_hotspots="false"
+	               tooltips_hotspots="flase"
 	               tooltips_mapspots="false"
 	               deeplinking="false"
 	               loadscene_flags="MERGE"
@@ -47,7 +47,7 @@
 	               controlbar_overlap.no-fractionalscaling="10"
 	               controlbar_overlap.fractionalscaling="0"
 	               design_skin_images="vtourskin.png"
-	               design_bgcolor="0xFFFFFF"
+	               design_bgcolor="0xffffff"
 	               design_bgalpha="1"
 	               design_bgborder="0"
 	               design_bgroundedge="10"
@@ -55,8 +55,9 @@
 	               design_thumbborder_bgborder="3 0xf75e4c 1.0"
 	               design_thumbborder_padding="3"
 	               design_thumbborder_bgroundedge="0"
-	               design_text_css="color:#FFFFFF; font-family:Arial;"
-	               design_text_shadow="1"
+	               design_text_css="color:#ffffff; font-family:Arial;"
+				   design_text_css2="color:#000000; font-family:Noto Sans KR;"
+	               design_text_shadow="0.5"
 	               />
 
 	<!--
@@ -95,7 +96,7 @@
 		
 		<hotspot type="image" name="spot3" url="skin/vtourskin_hotspot_point.png" style="skin_hotspotstyle" ath="-15.552" atv="19.172" linkmodal="modal2" onclick="custom_hotspotstyle_click();" />
 		<hotspot name="popup2" style="custom_hotspotext"  html="선암마을 " ath="-16.552" atv="14.172"  linkmodal="modal2" onclick="custom_hotspotstyle_click();" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="105.846" atv="56.389" distorted="true" zoom="false" linkedscene="scene_8-2" linkedscene_hoffset="347.17" use3dtransition="true" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-36.966" atv="76.839" distorted="true" zoom="true" linkedscene="scene_8-2" linkedscene_hoffset="542.21" use3dtransition="true" />
 
 
 	</scene>
@@ -111,7 +112,7 @@
 			<cube url="panos/8-2.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
 		</image>
 
-		<hotspot name="spot4" style="skin_hotspotstyle" ath="12.477" atv="26.168" distorted="false" zoom="false" linkedscene="scene_8-1" linkedscene_hoffset="12.83" use3dtransition="true" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="3.502" atv="31.528" distorted="true" zoom="true" linkedscene="scene_8-1" linkedscene_hoffset="-182.21" use3dtransition="true" />
 
 	</scene>
 

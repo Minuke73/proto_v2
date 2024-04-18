@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<krpano version="1.20.10" title="Virtual Tour">
+﻿<krpano version="1.20.10" title="">
 
 	<include url="skin/vtourskin.xml" />
+	<include url="skin/customskin.xml" />
 
 	<!-- customize skin settings: maps, gyro, webvr, thumbnails, tooltips, layout, design, ... -->
 	<skin_settings maps="false"
@@ -28,9 +28,9 @@
 	               thumbs_scrollbuttons="false"
 	               thumbs_scrollindicator="false"
 	               thumbs_loop="false"
-	               tooltips_buttons="false"
+	               tooltips_buttons="true"
 	               tooltips_thumbs="false"
-	               tooltips_hotspots="false"
+	               tooltips_hotspots="flase"
 	               tooltips_mapspots="false"
 	               deeplinking="false"
 	               loadscene_flags="MERGE"
@@ -39,7 +39,7 @@
 	               loadscene_blend_next="SLIDEBLEND(0.5,   0, 0.75, linear)"
 	               loadingtext=""
 	               layout_width="100%"
-	               layout_maxwidth="814"
+	               layout_maxwidth="770"
 	               controlbar_width="-24"
 	               controlbar_height="75"
 	               controlbar_offset="20"
@@ -47,16 +47,17 @@
 	               controlbar_overlap.no-fractionalscaling="10"
 	               controlbar_overlap.fractionalscaling="0"
 	               design_skin_images="vtourskin.png"
-	               design_bgcolor="0xFFFFFF"
+	               design_bgcolor="0xffffff"
 	               design_bgalpha="1"
 	               design_bgborder="0"
 	               design_bgroundedge="10"
 	               design_bgshadow="0 4 10 0x000000 0.3"
-	               design_thumbborder_bgborder="3 0xFFFFFF 1.0"
-	               design_thumbborder_padding="2"
+	               design_thumbborder_bgborder="3 0xf75e4c 1.0"
+	               design_thumbborder_padding="3"
 	               design_thumbborder_bgroundedge="0"
-	               design_text_css="color:#FFFFFF; font-family:Arial;"
-	               design_text_shadow="1"
+	               design_text_css="color:#ffffff; font-family:Arial;"
+				   design_text_css2="color:#000000; font-family:Noto Sans KR;"
+	               design_text_shadow="0.5"
 	               />
 
 	<!--
@@ -70,13 +71,19 @@
 	<!-- <include url="skin/vtourskin_design_117round.xml"    /> -->
 	<!-- <include url="skin/vtourskin_design_black.xml"       /> -->
 
-
 	
-	<scene name="scene_8-1" title="1" onstart="" thumburl="panos/8-1.tiles/thumb.jpg" lat="" lng="" heading="">
+	<!-- startup action - load the first scene -->
+	<action name="startup" autorun="onstart">
+		if(startscene === null OR !scene[get(startscene)], copy(startscene,scene[0].name); );
+		loadscene(get(startscene), null, MERGE);
+		if(startactions !== null, startactions() );
+	</action>
+	
+	<scene name="scene_8-1" title="한반도 지형 (1)" onstart="" thumburl="panos/8-1.tiles/thumb.jpg" lat="" lng="" heading="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
-		<view hlookat="-51.413" vlookat="27.186" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="-33.142" vlookat="40.597" fovtype="MFOV" fov="127.183" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/8-1.tiles/preview.jpg" />
 
@@ -84,17 +91,20 @@
 			<cube url="panos/8-1.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="-46.095" atv="35.228" width="64" height="79" linkedscene="scene_8-2" />
+		<hotspot type="image" name="spot1" url="skin/vtourskin_hotspot_point.png" style="skin_hotspotstyle" ath="-46.095" atv="35.228" linkmodal="modal1" onclick="custom_hotspotstyle_click();" />
+		<hotspot name="popup1" style="custom_hotspotext"  html="한반도 지형 " ath="-45.095" atv="29.228"  linkmodal="modal1" onclick="custom_hotspotstyle_click();" />
 		
-		<hotspot name="spot3" style="skin_hotspotstyle" ath="-15.371" atv="18.786" width="64" height="79" linkedscene="scene_8-1" linkedscene_lookat="7.53,24.56,63.02" linkedscene_hoffset="-180.0" use3dtransition="true" />
+		<hotspot type="image" name="spot3" url="skin/vtourskin_hotspot_point.png" style="skin_hotspotstyle" ath="-15.552" atv="19.172" linkmodal="modal2" onclick="custom_hotspotstyle_click();" />
+		<hotspot name="popup2" style="custom_hotspotext"  html="선암마을 " ath="-16.552" atv="14.172"  linkmodal="modal2" onclick="custom_hotspotstyle_click();" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-46.536" atv="71.600" distorted="true" zoom="true" linkedscene="scene_8-2" linkedscene_hoffset="542.21" use3dtransition="true" />
+
 
 	</scene>
-
-	<scene name="scene_8-2" title="2" onstart="" thumburl="panos/8-2.tiles/thumb.jpg" lat="" lng="" heading="">
+	<scene name="scene_8-2" title="한반도 지형 (2)" onstart="" thumburl="panos/8-2.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
-		<view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/8-2.tiles/preview.jpg" />
 
@@ -102,7 +112,8 @@
 			<cube url="panos/8-2.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
 		</image>
 
-	</scene>
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="315.677" atv="66.406" distorted="true" zoom="true" linkedscene="scene_8-1" linkedscene_hoffset="-182.21" use3dtransition="true" />
 
+	</scene>
 
 </krpano>
