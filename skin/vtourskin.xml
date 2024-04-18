@@ -57,7 +57,7 @@
 	               design_thumbborder_bgroundedge="0"
 	               design_text_css="color:#ffffff; font-family:Arial;"
 				   design_text_css2="color:#000000; font-family:Noto Sans KR;"
-	               design_text_shadow="0.5"
+	               design_text_shadow="#000000 0.5"
 	               />
 
 
@@ -299,7 +299,7 @@
 	       onout.addevent.mouse="tween(layer[skin_tooltip].alpha, 0.0, 0.1, default, set(layer[skin_tooltip].visible,false), copy(layer[skin_tooltip].x,mouse.stagex); copy(layer[skin_tooltip].y,mouse.stagey); );"
 	       />
 
-	<style name="button_tooltips_style" css="calc:skin_settings.design_text_css2" onloaded="if(tooltip AND skin_settings.tooltips_buttons, loadstyle(skin_tooltips) );" />
+	<style name="button_tooltips_style" onloaded="if(tooltip AND skin_settings.tooltips_buttons, loadstyle(skin_tooltips) );" />
 
 	<!-- the tooltip textfield -->
 	<layer name="skin_tooltip" keep="true"
@@ -308,12 +308,12 @@
 	       visible="false" alpha="0" enabled="false" zorder="2"
 	       align="lefttop" edge="bottom" oy="-2" width="200"
 	       bg="false"
-	       textshadow="get:skin_settings.design_text_shadow" textshadowrange="6.0" textshadowangle="90" textshadowcolor="0x000000" textshadowalpha="1.0"
-	       css="calc:skin_settings.design_text_css + ' text-align:center; font-size:16px;'"
+	       textshadow="get:skin_settings.design_text_shadow" textshadowrange="7" textshadowangle="1" textshadowcolor="0x000000" textshadowalpha="1.0"
+	       css="calc:skin_settings.design_text_css + 'text-align:center; font-size:16px;'"
 	       html=""
 	       />
 
-	<style name="button_tooltips_style" css="skin_settings.design_text_css2" onloaded="if(tooltip AND skin_settings.tooltips_buttons, loadstyle(skin_tooltips) );" />
+	<style name="button_tooltips_style" onloaded="if(tooltip AND skin_settings.tooltips_buttons, loadstyle(skin_tooltips) );" />
 
 
 	<!-- skin layout -->
@@ -328,7 +328,7 @@
 							<layer name="skin_video_seekpos" type="container" bgcolor="0xFFFFFF" bgalpha="1.0" align="left" edge="center" x="0" bgroundedge="8" width="10" height="10" />
 						</layer>
 					</layer>
-					<layer name="skin_video_time" type="text" align="rightbottom" x="4" enabled="false" bg="false" css="calc:skin_settings.design_text_css + ' text-align:left; font-style:italic; font-size:12px;'" textshadow="get:skin_settings.design_text_shadow" html="0:00 / 0:00" />
+					<layer name="skin_video_time" type="text" align="rightbottom" x="4" enabled="false" bg="false" css="calc:skin_settings.design_text_css + ' text-align:left; font-size:16px;'" textshadow="get:skin_settings.design_text_shadow" html="0:00 / 0:00" />
 				</layer>
 				<layer name="skin_scroll_container" type="container" align="lefttop" width="100%" height="100%" x="0" y="0" bgroundedge="get:skin_settings.design_bgroundedge" maskchildren="true">
 					<layer name="skin_thumbs_container" type="container" align="lefttop" width="100%" height="100%" visible="false">
@@ -373,7 +373,7 @@
 				<layer name="skin_btn_fs"        style="skin_base|skin_glow|button_tooltips_style" crop="0|576|64|64"  align="right"       x="90"   y="0"  scale="0.5" onclick="switch(fullscreen);" devices="fullscreensupport" tooltip="전체 화면"/>
 				<layer name="skin_btn_hide"      style="skin_base|skin_glow|button_tooltips_style" crop="0|448|64|64"  align="right"       x="50"   y="0"  scale="0.5" onclick="skin_hideskin()" tooltip="컨트롤 바 숨기기"/>
 				<layer name="skin_btn_show" type="container" bgcapture="true" align="bottom" width="100%" height="get:skin_settings.controlbar_height" y="calc:skin_settings.controlbar_height - skin_settings.controlbar_offset_closed" onclick="skin_showskin()" onhover="tween(alpha,1.0);" onout="tween(alpha,0.25);" ondown.touch="onhover();" onup.touch="onout();" visible="false" capture="false" alpha="0.0">
-					<layer name="skin_btn_show_icon" style="skin_base" crop="64|448|64|64" scale="0.5" align="bottom" y="2" enabled="false" />
+					<layer name="skin_btn_show_icon" style="skin_base|skin_glow|button_tooltips_style" crop="0|256|64|64" scale="1" align="bottom" y="2" enabled="false" tooltip="컨트롤 바 숨기기" />
 				</layer>
 				<layer name="skin_btn_next"      style="skin_base|skin_glow" crop="64|64|64|64"  align="right"       x="5"    y="0"   scale="0.5" alpha="0.5"  onclick="if(skin_settings.thumbs_loop, skin_nextscene_loop(+1), skin_nextscene(+1) );" />
 				</layer>
