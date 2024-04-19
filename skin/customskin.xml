@@ -1,7 +1,7 @@
 ﻿<krpano>
  
 	<style name="custom_hotspotstyle" url="vtourskin_point.png" edge="top" distorted="true"
-	       tooltip="true"
+	       tooltip="false"
 	       linkedscene=""
 	       linkedscene_lookat=""
 	       depth="1000"
