@@ -34,9 +34,9 @@
 		<hotspot type="image" name="spot1" url="skin/vtourskin_hotspot_point.png" style="skin_hotspotstyle" ath="-46.095" atv="35.228" linkmodal="modal1" onclick="custom_hotspotstyle_click();" />
 		<hotspot name="popup1" style="custom_hotspotext"  html="한반도 지형 " ath="-45.095" atv="29.228"  linkmodal="modal1" onclick="custom_hotspotstyle_click();" />
 		
-		<hotspot type="image" name="spot3" url="skin/vtourskin_hotspot_point.png" style="skin_hotspotstyle" ath="-15.552" atv="19.172" linkmodal="modal2" onclick="custom_hotspotstyle_click();" />
-		<hotspot name="popup2" style="custom_hotspotext"  html="선암마을 " ath="-16.552" atv="14.172"  linkmodal="modal2" onclick="custom_hotspotstyle_click();" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="-33.281" atv="70.396" distorted="true" zoom="true" linkedscene="scene_8-2" linkedscene_hoffset="542.21" use3dtransition="true" />
+		<!--<hotspot type="image" name="spot3" url="skin/vtourskin_hotspot_point.png" style="skin_hotspotstyle" ath="-15.552" atv="19.172" linkmodal="modal2" onclick="custom_hotspotstyle_click();" />
+		<hotspot name="popup2" style="custom_hotspotext"  html="선암마을 " ath="-16.552" atv="14.172"  linkmodal="modal2" onclick="custom_hotspotstyle_click();" />-->
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-33.281" atv="70.396" rotate="-180" distorted="true" zoom="true" linkedscene="scene_8-2" linkedscene_hoffset="542.21" use3dtransition="true" />
 
 
 	</scene>
@@ -52,7 +52,7 @@
 			<cube url="panos/8-2.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
 		</image>
 
-		<hotspot name="spot4" style="skin_hotspotstyle" ath="14.233" atv="21.519" distorted="true" zoom="true" linkedscene="scene_8-1" linkedscene_hoffset="-182.21" use3dtransition="true" />
+		<hotspot name="spot4" style="skin_hotspotstyle" rotate="0" ath="5" atv="21.519" distorted="true" zoom="true" linkedscene="scene_8-1" linkedscene_hoffset="-182.21" use3dtransition="true" />
 
 	</scene>
 
