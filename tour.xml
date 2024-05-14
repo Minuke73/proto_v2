@@ -36,7 +36,7 @@
 		
 		<!--<hotspot type="image" name="spot3" url="skin/vtourskin_hotspot_point.png" style="skin_hotspotstyle" ath="-15.552" atv="19.172" linkmodal="modal2" onclick="custom_hotspotstyle_click();" />
 		<hotspot name="popup2" style="custom_hotspotext"  html="선암마을 " ath="-16.552" atv="14.172"  linkmodal="modal2" onclick="custom_hotspotstyle_click();" />-->
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="-33.281" atv="70.396" rotate="-180" distorted="true" zoom="true" linkedscene="scene_8-2" linkedscene_hoffset="542.21" use3dtransition="true" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-75" atv="72" rotate="-180" distorted="false" zoom="true" linkedscene="scene_8-2" linkedscene_hoffset="542.21" use3dtransition="true" />
 
 
 	</scene>
